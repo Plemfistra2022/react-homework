@@ -1,0 +1,23 @@
+.course-card {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    border: orange 1px solid;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background: white ;
+}
+
+.course-title {
+    font-weight: 700;
+    margin: 0;
+    color: orange;
+}
+
+.course-info {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin: 0;
+}
