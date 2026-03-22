@@ -1,6 +1,15 @@
-Lessons:
-- lesson1:
-  - components
-  - tailwind
-  - children
-  - map
+useState
+
+const [counter, setCounter] = useState(0); 
+// объявление переменной состояния с начальным значением 0
+// counter — текущее значение (наша «память»).
+// setCounter — функция, которая меняет это значение
+// 0 — начальное значение
+
+
+// Инкремент (прямое обновление)
+setCounter(counter + 1);
+
+
+// Декремент (через колбэк — лучший метод)
+setCounter(prev => prev - 1);
