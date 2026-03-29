@@ -1,10 +1,36 @@
-Lessons:
-- lesson1
-  - components
-  - tailwind
-  - children
-  - map
-- lesson2:
-  - useState-hook
-  - useEffect hooks + fetch
-  - service layer
+В этой итерации мы внедрили использование переменных окружения для управления URL-адресами API. Это делает приложение гибким и защищенным.
+
+🌟 Основные изменения
+Environment Variables: Все чувствительные или часто меняющиеся данные (например, ссылки на API) вынесены в файл .env.
+
+Vite Environment: Использование объекта import.meta.env для доступа к переменным окружения.
+
+Динамические пути: Улучшена логика формирования URL для получения конкретного пользователя.
+
+⚙️ Настройка окружения
+Для работы приложения необходимо создать файл .env в корне проекта (на одном уровне с package.json):
+
+# Файл .env
+VITE_API_URL=https://jsonplaceholder.typicode.com/users
+
+Важно: В Vite переменные обязательно должны начинаться с префикса VITE_, иначе они не будут доступны в клиентской части кода.
+
+📂 Обновленный сервис (api.service.ts)
+Теперь функции запросов используют глобальную переменную вместо жестко прописанной строки. Это позволяет изменить адрес сервера во всем приложении, отредактировав всего одну строку в .env.
+
+export const getUsers = async (): Promise<IUser[]> => {
+// Используем переменную из окружения
+  return await fetch(import.meta.env.VITE_API_URL)
+    .then(res => res.json())
+}
+
+export const getUser = async (id: string): Promise<IUser> => {
+// Корректная конкатенация пути для ID
+  return await fetch(import.meta.env.VITE_API_URL + '/' + id)
+    .then(res => res.json())
+}
+
+📝 Запуск
+Создайте файл .env и добавьте туда VITE_API_URL.
+
+Перезапустите сервер разработки (npm run dev), так как изменения в .env файлах подхватываются только при рестарте.
