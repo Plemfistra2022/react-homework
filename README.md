@@ -6,3 +6,5 @@ Lessons:
   - map
 - lesson2:
   - useState-hook
+  - useEffect hooks + fetch
+  - service layer
