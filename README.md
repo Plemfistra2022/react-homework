@@ -1,10 +1,5 @@
-Lessons:
-- lesson1
-  - components
-  - tailwind
-  - children
-  - map
-- lesson2:
-  - useState-hook
-  - useEffect hooks + fetch
-  - service layer
+https://jsonplaceholder.typicode.com/posts – тут масив даних. Ознайомтесь з ним для початку.
+
+Створити необхідні моделі та компоненти та вивести всю інформацію за аналогією з попереднім завданням.
+
+Додати мінімальну стилізацію
