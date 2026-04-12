@@ -1,10 +1,1 @@
-Lessons:
-- lesson1
-  - components
-  - tailwind
-  - children
-  - map
-- lesson2:
-  - useState-hook
-  - useEffect hooks + fetch
-  - service layer
+Те саме, що і попередні завдання, але дані отримати з апі – https://dummyjson.com/posts
