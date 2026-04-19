@@ -1,0 +1,28 @@
+.product-card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid #fd774a;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #ffeae1;
+    flex: 0 0 300px;
+
+}
+.product-card h2{
+    color: #272727;
+}
+.product-card p{
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.product-card p.price{
+    color: #df4d1d;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: auto;
+}
+.product-card img{
+    width: 100%;
+}
