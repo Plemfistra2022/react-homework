@@ -8,3 +8,10 @@ Lessons:
   - useState-hook
   - useEffect hooks + fetch
   - service layer
+  - .env модуль
+  - State lift
+- lesson3:
+  - Basic router
+  - Router demo
+  - State forward
+  - Dynamic routes
